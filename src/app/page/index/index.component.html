@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+<div>
+
+  <div class="code-box">
+    <nz-select style="width: 200px;" [(ngModel)]="singleValue" [nzSize]="size" class="code-box-demo">
+      <nz-option *ngFor="let option of listOfOption" [nzLabel]="option.label" [nzValue]="option.value"></nz-option>
+    </nz-select>
+  </div>
+
+  <!-- 上传 -->
+  <app-nz-demo-upload-picture-card></app-nz-demo-upload-picture-card>
+
+  <app-nz-demo-drawer-service></app-nz-demo-drawer-service>
+  <button nz-button nzType="default" nzBlock>Submit</button>
+
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,25 @@
+<!--<ng-template #drawerTemplate let-data let-drawerRef="drawerRef">
+  value: {{data?.value}}
+  <br>
+  <button nz-button nzType="primary" (click)="drawerRef.close()">close</button>
+</ng-template>-->
+
+<ng-template #drawerCustomTemplate let-data let-drawerRef="drawerRef">
+  <div>
+    <nz-form-label>label</nz-form-label>
+    <input nz-input [(ngModel)]="value">
+    <nz-divider></nz-divider>
+  </div>
+
+
+  <button nzType="primary" (click)="drawerRef.close()" nz-button>Confirm</button>
+</ng-template>
+
+<div nz-form>
+  <nz-form-item>
+    <input nz-input [(ngModel)]="value">
+  </nz-form-item>
+</div>
+
+<!--<button nz-button nzType="primary" (click)="openTemplate()">Use Template</button>-->
+<button nz-button nzType="primary" (click)="openComponent()">Use Component</button>
